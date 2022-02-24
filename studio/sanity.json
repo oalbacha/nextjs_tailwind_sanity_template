@@ -1,11 +1,12 @@
 {
   "root": true,
-  "project": {
-    "name": "blog"
-  },
   "api": {
-    "projectId": "4eqy1x7a",
+    "projectId": "wt7o2yj7",
     "dataset": "production"
+  },
+  "project": {
+    "name": "Studio",
+    "basePath": "/studio"
   },
   "plugins": [
     "@sanity/base",
