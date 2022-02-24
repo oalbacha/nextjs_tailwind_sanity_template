@@ -1,0 +1,38 @@
+.markdown {
+  @apply leading-relaxed;
+}
+
+.markdown a {
+  @apply leading-relaxed text-gray-700 underline;
+}
+
+.markdown p,
+.markdown ul,
+.markdown ol,
+.markdown blockquote {
+  @apply my-3 text-gray-500;
+}
+
+.markdown h2 {
+  @apply text-3xl mt-12 mb-4 leading-snug;
+}
+
+.markdown h3 {
+  @apply text-2xl mt-8 mb-4 leading-snug;
+}
+
+.markdown ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.markdown li {
+  padding-left: 1.2em;
+  text-indent: -1em;
+}
+
+.markdown li:before {
+  content: "➜";
+  padding-right: 5px;
+}

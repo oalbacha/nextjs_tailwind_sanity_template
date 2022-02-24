@@ -3,6 +3,10 @@ import ErrorPage from 'next/error'
 import { getAllPostsWithSlug, getPostAndMorePosts } from '../../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
+import BlockContent from '@sanity/block-content-to-react'
+import styles from '../../components/markdown-styles.module.css'
+
+
 
 export default function Post({ post, morePosts, preview }) {
   console.log('morePosts:', morePosts)
@@ -12,8 +16,15 @@ export default function Post({ post, morePosts, preview }) {
   }
   return (
     <>
-      <div>{post.title}</div>
-      <div>{post.title}</div>
+      <h2>{post.title}</h2>
+      <div>
+        <BlockContent
+          blocks={post.body}
+          projectId={process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}
+          dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}
+          className={styles.markdown}
+        />
+      </div>
     </>
   )
 }
