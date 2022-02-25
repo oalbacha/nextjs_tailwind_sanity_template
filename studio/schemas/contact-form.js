@@ -16,8 +16,20 @@ export default {
       type: 'string',
     },
     {
+      name: 'eventDate',
+      type: 'date',
+    },
+    {
+      name: 'eventType',
+      type: 'string',
+    },
+    {
       name: 'message',
       type: 'text',
+    },
+    {
+      name: 'newsletter',
+      type: 'boolean',
     }
   ],
   preview: {
